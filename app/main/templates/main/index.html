@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+<link rel="stylesheet" href="templates/static/main/css/style.css">
+</head>
+<body>
+
+ <span style="">
+     Бортовой номер Модель макс.грузоподъемность текущий вес перегруз% координаты разгрузки
+ </span>
+
+<div style="display: inline; position: relative; top: 50px; left: 100px;">
+<li style="font-size: 30px;  word-spacing: 40px;list-style-type: none;">
+    {{ t0 }} {{ mo0 }} {{ v0 }} {{ m0 }} {{ p0 }} <br>
+    {{ t1 }} {{ mo1 }} {{ v1 }} {{ m1 }} {{ p1 }} <br>
+    {{ t2 }} {{ mo2 }} {{ v2 }}{{ m2 }} {{ p2 }}
+</li>
+    <form method="post">
+        {% csrf_token %}
+        {{ form }}
+    <input type="text" placeholder="0">
+    </form>
+</div>
+
+</body>
+</html>
